@@ -1,0 +1,29 @@
+@import "../../App.scss";
+
+// Category index
+.category-index {
+    .card {
+        overflow: hidden;
+        background: none;
+
+        .card-header {
+            border-radius: 6px;
+
+            h6 {
+                margin-top: 8px;
+                font-weight: 500;
+                color: $secondary;
+            }
+
+            .btn {
+                color: #fff;
+                padding: 5px 6px;
+                background: $primary;
+            }
+        }
+
+        .card-body {
+            background: none;
+        }
+    }
+}

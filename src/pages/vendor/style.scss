@@ -1,0 +1,302 @@
+@import "../../App.scss";
+
+// Edit & create vendor
+
+.edit-vendor,
+.create-vendor {
+    .card {
+        overflow: hidden;
+        border-radius: 6px;
+
+        .card-header {
+            h6 {
+                margin-top: 8px;
+                font-weight: 500;
+                color: $secondary;
+            }
+
+            .btn {
+                color: #fff;
+                padding: 5px 6px;
+                background: $primary;
+            }
+        }
+
+        .card-body {
+            form {
+                .img-container {
+                    .image {
+                        width: 80px;
+                        height: 80px;
+                        overflow: hidden;
+                        margin: auto;
+                        position: relative;
+
+                        img {
+                            min-width: 100%;
+                            min-height: 100%;
+                        }
+
+                        .upload {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            opacity: 0;
+                            cursor: pointer;
+                        }
+
+                        p {
+                            color: #000;
+                            font-size: 13px;
+                            font-family: "Roboto", sans-serif;
+                        }
+
+                        @media (min-width: 350px) {
+                            width: 100px;
+                            height: 100px;
+                        }
+
+                        @media (min-width: 576px) {
+                            width: 140px;
+                            height: 140px;
+                        }
+                    }
+                }
+
+                .thumbnail-container {
+                    padding: 5px;
+                    position: relative;
+    
+                    .image {
+                        width: 120px;
+                        height: 120px;
+                        overflow: hidden;
+                        margin: auto;
+                        position: relative;
+    
+                        img {
+                            min-width: 100%;
+                            min-height: 100%;
+                        }
+    
+                        .upload {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            opacity: 0;
+                            cursor: pointer;
+                        }
+                    }
+    
+                    // Overlay
+                    .thumbnail-overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(255, 255, 255, 0.795);
+    
+                        .loader {
+                            width: 40px;
+                            height: 40px;
+                            margin: auto;
+                            border-radius: 50%;
+                            border: 2px solid #fff;
+                            border-top: 2px solid $primary;
+                            animation: spin 1s linear infinite;
+                            -webkit-animation: spin 1s linear infinite;
+                        }
+    
+                        /* Safari */
+                        @-webkit-keyframes spin {
+                            0% {
+                                -webkit-transform: rotate(0deg);
+                            }
+    
+                            100% {
+                                -webkit-transform: rotate(360deg);
+                            }
+                        }
+    
+                        @keyframes spin {
+                            0% {
+                                transform: rotate(0deg);
+                            }
+    
+                            100% {
+                                transform: rotate(360deg);
+                            }
+                        }
+                    }
+    
+                    .btn {
+                        right: 10px;
+                        bottom: 10px;
+                        color: #ea5455;
+                        padding: 4px 5px;
+                        position: absolute;
+                        transition: 0.3s all;
+                        background: #ea54544d;
+    
+                        &:hover {
+                            color: #fff;
+                            background: #ea5455;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Show vendor
+.show-vendor {
+    .card {
+        overflow: hidden;
+        border-radius: 6px;
+
+        .card-header {
+            h6 {
+                margin-top: 8px;
+                font-weight: 500;
+                color: $secondary;
+            }
+
+            .btn {
+                color: #fff;
+                padding: 5px 6px;
+                background: $primary;
+            }
+        }
+
+        .card-body {
+            .vendor-profile-container {
+                // Name circle
+                .name-circle {
+                    width: 80px;
+                    height: 80px;
+                    margin-top: 10px;
+                    background: #7267f02f;
+
+                    h1 {
+                        color: #7367f0;
+                        font-weight: 500;
+                        margin-bottom: 0;
+                        text-transform: uppercase;
+                    }
+
+                    @media (max-width: 576px) {
+                        margin: auto;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            h6 {
+                font-size: 15px;
+            }
+
+            // Information Table
+            table {
+                tbody {
+                    tr {
+                        td {
+                            color: rgba(0, 0, 0, 0.671);
+                            font-size: 13px;
+                            text-transform: capitalize;
+                            margin-bottom: 5px;
+                        }
+
+                        .title-td {
+                            min-width: 110px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+
+            p {
+                color: rgba(0, 0, 0, 0.671);
+                font-size: 13px;
+                text-transform: capitalize;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    
+
+    // vendor-products-container
+    .vendor-products-container {
+        .card {
+            .card-header {
+                .file-upload-container {
+                    overflow: hidden;
+                    position: relative;
+
+                    .upload {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        opacity: 0;
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                }
+
+                .xlsx-upload-btn {
+                    font-size: 14px;
+                    min-width: 130px;
+                    font-weight: 600;
+                    padding: 7px 0px;
+                    border-radius: 25px;
+                    color: #28c76f;
+                    background: #28c76f21;
+                }
+            }
+
+            .card-body {
+                .product-container {
+                    float: left;
+                    padding: 5px;
+                    text-align: center;
+
+                    img {
+                        max-width: 100%;
+                        max-height: 150px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    @media (max-width: 576px) {
+                        width: 50%;
+                    }
+
+                    @media (min-width: 576px) {
+                        width: 33.33%;
+                        padding: 10px;
+                    }
+
+                    @media (min-width: 768px) {
+                        width: 25%;
+                    }
+
+                    @media (min-width: 1440px) {
+                        width: 20%;
+                    }
+
+                    @media (min-width: 1600px) {
+                        width: 16.66%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,171 @@
+.img-select-container {
+    .preview-container {
+        .image {
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: 4px;
+
+            img {
+                min-width: 100%;
+                min-height: 100%;
+            }
+
+            p {
+                color: #000;
+                font-size: 13px;
+                font-family: "Roboto", sans-serif;
+            }
+
+            // Overlay
+            .thumbnail-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.795);
+
+                .loader {
+                    width: 40px;
+                    height: 40px;
+                    margin: auto;
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+                    border-top: 2px solid #2962ff;
+                    animation: spin 1s linear infinite;
+                    -webkit-animation: spin 1s linear infinite;
+                }
+
+                /* Safari */
+                @-webkit-keyframes spin {
+                    0% {
+                        -webkit-transform: rotate(0deg);
+                    }
+
+                    100% {
+                        -webkit-transform: rotate(360deg);
+                    }
+                }
+
+                @keyframes spin {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .add-container {
+        .image-plus {
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: 4px;
+
+            .upload {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                opacity: 0;
+                width: 100%;
+                cursor: pointer;
+            }
+
+            .icon {
+                padding: 10px 12px;
+                border-radius: 50%;
+                color: rgba(85, 85, 85, 0.815);
+            }
+        }
+    }
+}
+
+// upload with modal
+.custom-file-upload-modal {
+
+
+
+    // File preview container
+    .file-preview-container {
+        .file-preview {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 6px;
+            position: relative;
+
+            img {
+                min-width: 100%;
+            }
+
+            .btn__close {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                color: #555 !important;
+                background: #fff !important;
+                border: none !important;
+                border-radius: 50% !important;
+                padding: 6px 8px !important;
+
+                &:hover {
+                    color: #000 !important;
+                    background: #fff !important;
+                }
+            }
+        }
+
+        .btn__upload {
+            font-size: 14px;
+            font-weight: 700;
+            padding: 10px 25px;
+            color: #063cdd !important;
+            background: #0c236917 !important;
+
+            &:hover {
+                color: #063cdd !important;
+                background: #063cdd3f !important;
+            }
+        }
+
+        .btn__cancel {
+            font-size: 14px;
+            font-weight: 700;
+            padding: 10px 25px;
+            color: #dc3546a4 !important;
+            background: #dc354610 !important;
+
+            &:hover {
+                color: #dc3545 !important;
+                background: #dc35463a !important;
+            }
+        }
+    }
+
+    // File selector container
+    .file-selector-container {
+        .upload {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            opacity: 0;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 0;
+            line-height: 1.4rem;
+        }
+    }
+}

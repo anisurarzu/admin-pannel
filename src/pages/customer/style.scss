@@ -1,0 +1,63 @@
+@import "../../App.scss";
+
+// Store Customer
+.store-customer {
+    .card {
+        overflow: hidden;
+        border-radius: 6px;
+
+        .card-header {
+            h6 {
+                margin-top: 8px;
+                font-weight: 500;
+                color: $secondary;
+            }
+
+            .btn {
+                color: #fff;
+                padding: 5px 6px;
+                background: $primary;
+            }
+        }
+
+        .card-body {
+            form {
+                .img-container {
+                    .image {
+                        width: 80px;
+                        height: 80px;
+                        overflow: hidden;
+                        margin: auto;
+                        position: relative;
+
+                        img {
+                            min-width: 100%;
+                            min-height: 100%;
+                        }
+
+                        .upload {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            opacity: 0;
+                            cursor: pointer;
+                        }
+
+                        p {
+                            color: #000;
+                            font-size: 13px;
+                            font-family: "Roboto", sans-serif;
+                        }
+
+                        @media (min-width: 350px) {
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import "../../../App.scss";
+
+.custom-profile-modal {
+    .modal-content {
+        .modal-header {
+            h6 {
+                font-size: 18px;
+            }
+            p {
+                font-size: 13px;
+                margin-bottom: 0;
+            }
+        }
+        .modal-body {
+            .form-group {
+                p {
+                    font-size: 13px;
+                    margin-left: 2px;
+                    margin-bottom: 2px;
+                }
+
+                .form-control {
+                    font-size: 14px;
+                    height: 42px;
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            .btn {
+                color: #fff;
+                font-size: 15px;
+                font-weight: 600;
+                padding: 10px 25px;
+                border-radius: 25px;
+                background: $primary;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@import "../../../App.scss";
+
+// index
+.report-index {
+    .card {
+        border-radius: 6px;
+        overflow: auto;
+
+        .card-header {
+            h6 {
+                margin-top: 8px;
+                font-weight: 500;
+                color: $secondary;
+            }
+
+            .btn {
+                color: #fff;
+                font-size: 14px;
+                font-weight: 700;
+                padding: 8px 25px;
+                background: $primary;
+            }
+        }
+    }
+}

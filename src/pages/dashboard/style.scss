@@ -1,0 +1,168 @@
+.dashboard-container {
+    .card-body {
+        .items {
+            i {
+                padding: 9px 12px;
+                border-radius: 50%;
+            }
+
+            .icon-1 {
+                color: #7367f0;
+                background: #7267f02f;
+            }
+
+            .icon-2 {
+                color: #00cfe8;
+                background: #00d1e823;
+            }
+
+            .icon-3 {
+                color: #ea5455;
+                background: #ea545421;
+            }
+
+            .icon-4 {
+                color: #28c76f;
+                background: #28c76f21;
+            }
+        }
+    }
+
+    .busket-card-container {
+        .card {
+            height: 120px;
+            float: left;
+            padding: 5px;
+            width: 50%;
+            background: none;
+
+            .card-body {
+                background: #fff;
+                border-radius: 6px;
+            }
+
+            @media(min-width: 768px) {
+                width: 33.33%;
+                padding: 10px;
+            }
+
+            @media(min-width: 1200px) {
+                width: 20%;
+                padding: 10px;
+            }
+        }
+
+        @media(min-width: 992px) {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+    }
+}
+
+// @import "../../App.scss";
+
+// .dashboard-container {
+
+//     // statistics container
+//     .statistics-container {
+//         .card {
+//             overflow: hidden;
+//             border-radius: 6px;
+
+//             .card-header {
+//                 h6 {
+//                     color: #555;
+//                     margin-bottom: 0;
+//                     font-weight: 400;
+//                 }
+//             }
+
+
+//         }
+//     }
+
+//     // busket-size-container
+
+
+//     // products orders status container
+//     .products-orders-status-container {
+//         .card {
+//             overflow: hidden;
+//             border-radius: 6px;
+
+//             .card-header {
+//                 border: 0;
+//                 padding: 20px;
+//                 background: #fff;
+
+//                 h6 {
+//                     color: #555;
+//                     margin-bottom: 0;
+//                     font-weight: 400;
+//                 }
+
+//                 p {
+//                     font-size: 13px;
+//                     margin-bottom: 0;
+//                 }
+//             }
+
+//             .card-body {
+//                 .table {
+//                     thead {
+//                         tr {
+//                             td {
+//                                 color: #000;
+//                                 font-size: 13px;
+//                                 padding-bottom: 10px;
+//                                 text-transform: capitalize;
+//                                 border-bottom: 1px solid #dfdfdf;
+//                             }
+//                         }
+//                     }
+
+//                     tbody {
+//                         tr {
+//                             td {
+//                                 color: #555;
+//                                 font-size: 13px;
+//                                 padding-top: 8px;
+//                                 padding-bottom: 8px;
+//                                 text-transform: capitalize;
+//                                 border-bottom: 1px solid #dfdfdf;
+
+//                                 img {
+//                                     height: 45px;
+//                                     max-width: 45px;
+//                                 }
+
+//                                 span {
+//                                     font-size: 13px;
+//                                     text-transform: capitalize;
+//                                 }
+
+//                                 .in-stock {
+//                                     color: #28c76f;
+//                                     padding: 5px 10px;
+//                                     border-radius: 4px;
+//                                     background: #28c76f21;
+//                                 }
+
+//                                 .stock-out {
+//                                     color: #ea5455;
+//                                     padding: 5px 10px;
+//                                     border-radius: 4px;
+//                                     background: #ea545421;
+//                                 }
+//                             }
+
+//                             .custom-td {
+//                                 padding-top: 20px;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

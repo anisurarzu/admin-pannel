@@ -1,0 +1,20 @@
+$danger: #dc3545;
+
+.form-group {
+    .form-control {
+        width: 100%;
+        color: #000;
+        font-size: 14px;
+        min-height: 42px;
+        border: 1px solid #dfdfdf;
+    }
+
+    .form-control:focus {
+        background: #fff;
+        border: 1px solid #dfdfdf;
+    }
+
+    .error {
+        border: 1px solid $danger !important;
+    }
+}
