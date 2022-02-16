@@ -913,103 +913,100 @@ const Create = () => {
                   </div> */}
 
                   {/* cover image upload & preview Container */}
-                  <Container.Row>
-                    <Container.Column class="col-lg-6">
-                      <div className="row mb-3 mb-lg-4">
-                        <div className="col-12">
-                          <div>
-                            {thumbnail.error ? (
-                              <p className="text-danger mb-0 ml-2">
-                                {thumbnail.error}
-                              </p>
-                            ) : (
-                              <p className="mb-0 ml-2">Cover Image</p>
-                            )}
-                          </div>
+                  <div className="d-flex">
+                    <div className="row mb-3 mb-lg-4">
+                      <div className="col-12">
+                        <div>
+                          {thumbnail.error ? (
+                            <p className="text-danger mb-0 ml-2">
+                              {thumbnail.error}
+                            </p>
+                          ) : (
+                            <p className="mb-0 ml-2">Cover Image</p>
+                          )}
+                        </div>
 
-                          <div className="d-flex">
-                            <div className="thumbnail-container">
-                              <div className="image border">
-                                <input
-                                  type="file"
-                                  accept=".jpg, .png, .jpeg"
-                                  className="upload"
-                                  onChange={thumbnailHandeller}
-                                />
-                                <div className="flex-center flex-column">
-                                  <Icon icon={plus} size={22} />
-                                </div>
+                        <div className="d-flex">
+                          <div className="thumbnail-container">
+                            <div className="image border">
+                              <input
+                                type="file"
+                                accept=".jpg, .png, .jpeg"
+                                className="upload"
+                                onChange={thumbnailHandeller}
+                              />
+                              <div className="flex-center flex-column">
+                                <Icon icon={plus} size={22} />
                               </div>
                             </div>
-
-                            {/* image preview */}
-                            {thumbnail.preview ? (
-                              <div className="thumbnail-container text-center">
-                                <div className="image border">
-                                  <img
-                                    src={thumbnail.preview}
-                                    className="img-fluid"
-                                    alt="..."
-                                  />
-                                </div>
-                              </div>
-                            ) : null}
-                          </div>
-                        </div>
-                      </div>
-                      {/* cover image end */}
-                    </Container.Column>
-                    <Container.Column class="col-lg-6">
-                      {/* inside image upload & preview Container */}
-                      <div className="row mb-3 mb-lg-4">
-                        <div className="col-12">
-                          <div>
-                            {thumbnail.error ? (
-                              <p className="text-danger mb-0 ml-2">
-                                {thumbnail.error}
-                              </p>
-                            ) : (
-                              <p className="mb-0 ml-2">Look Inside</p>
-                            )}
                           </div>
 
-                          <div className="d-flex">
-                            <div className="thumbnail-container">
+                          {/* image preview */}
+                          {thumbnail.preview ? (
+                            <div className="thumbnail-container text-center">
                               <div className="image border">
-                                <input
-                                  type="file"
-                                  accept=".jpg, .png, .jpeg"
-                                  className="upload"
-                                  onChange={thumbnailHandeller}
+                                <img
+                                  src={thumbnail.preview}
+                                  className="img-fluid"
+                                  alt="..."
                                 />
-                                <div className="flex-center flex-column">
-                                  <Icon icon={plus} size={22} />
-                                </div>
                               </div>
                             </div>
-
-                            {/* image preview */}
-                            {thumbnail.preview ? (
-                              <div className="thumbnail-container text-center">
-                                <div className="image border">
-                                  <img
-                                    src={thumbnail.preview}
-                                    className="img-fluid"
-                                    alt="..."
-                                  />
-                                </div>
-                              </div>
-                            ) : null}
-                          </div>
+                          ) : null}
                         </div>
                       </div>
-                      {/* inside image end */}
-                    </Container.Column>
-                  </Container.Row>
+                    </div>
+                    {/* cover image end */}
 
-                  <div className="row">
+                    {/* inside image upload & preview Container */}
+                    <div className="row  mb-lg-4">
+                      <div className="col-12">
+                        <div>
+                          {thumbnail.error ? (
+                            <p className="text-danger mb-0 ml-2">
+                              {thumbnail.error}
+                            </p>
+                          ) : (
+                            <p className="mb-0 ml-2">Look Inside</p>
+                          )}
+                        </div>
+
+                        <div className="d-flex">
+                          <div className="thumbnail-container">
+                            <div className="image border">
+                              <input
+                                type="file"
+                                accept=".jpg, .png, .jpeg"
+                                className="upload"
+                                onChange={thumbnailHandeller}
+                              />
+                              <div className="flex-center flex-column">
+                                <Icon icon={plus} size={22} />
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* image preview */}
+                          {thumbnail.preview ? (
+                            <div className="thumbnail-container text-center">
+                              <div className="image border">
+                                <img
+                                  src={thumbnail.preview}
+                                  className="img-fluid"
+                                  alt="..."
+                                />
+                              </div>
+                            </div>
+                          ) : null}
+                        </div>
+                      </div>
+                    </div>
+                    {/* inside image end */}
+                  </div>
+
+                  <div>
                     {/* Submit button */}
-                    <div className="col-12 text-right">
+                    <div className="col-6 text-right">
                       <button
                         type="submit"
                         className="btn shadow-none"
