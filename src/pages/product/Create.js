@@ -394,7 +394,7 @@ const Create = () => {
     await Requests.Product.Store(formData, header);
     setLoading(false);
 
-    console.log(data,formData)
+    console.log(data, formData);
   };
 
   return (
@@ -433,7 +433,7 @@ const Create = () => {
                             {errors.name && errors.name.message}
                           </p>
                         ) : (
-                          <p>Product Title</p>
+                          <p>Product Name(EN)</p>
                         )}
 
                         <input
@@ -508,15 +508,15 @@ const Create = () => {
                             <p>Author Name</p>
                           )}
 
-                          <input
-                            type="text"
-                            name="bn_name"
+                          <select
+                            name="author name"
                             className="form-control shadow-none"
-                            placeholder="Enter author name"
-                            // ref={register({
-                            //     required: "Product name is required"
-                            // })}
-                          />
+                            ref={register()}
+                          >
+                            <option value="">Select type</option>
+                            <option value="buy_now">Author</option>
+                            <option value="pre_order">Brand</option>
+                          </select>
                         </div>
                       </Container.Column>
                     }
@@ -531,15 +531,15 @@ const Create = () => {
                             <p>Translator Name</p>
                           )}
 
-                          <input
-                            type="text"
-                            name="bn_name"
+                          <select
+                            name="translator name"
                             className="form-control shadow-none"
-                            placeholder="Enter translator name"
-                            // ref={register({
-                            //     required: "Product name is required"
-                            // })}
-                          />
+                            ref={register()}
+                          >
+                            <option value="">Select type</option>
+                            <option value="buy_now">Author</option>
+                            <option value="pre_order">Brand</option>
+                          </select>
                         </div>
                       </Container.Column>
                     }
@@ -553,16 +553,15 @@ const Create = () => {
                           ) : (
                             <p>Editor Name</p>
                           )}
-
-                          <input
-                            type="text"
-                            name="bn_name"
+                          <select
+                            name="editor name"
                             className="form-control shadow-none"
-                            placeholder="Enter editor name"
-                            // ref={register({
-                            //     required: "Product name is required"
-                            // })}
-                          />
+                            ref={register()}
+                          >
+                            <option value="">Select type</option>
+                            <option value="buy_now">Author</option>
+                            <option value="pre_order">Brand</option>
+                          </select>
                         </div>
                       </Container.Column>
                     }
@@ -702,121 +701,6 @@ const Create = () => {
                         </div>
                       </Container.Column>
                     }
-
-                    {/* Trending item */}
-                    {/*    <Container.Column className="col-lg-4">
-                      <div className="input-group mb-3">
-                        <Form.Group controlId="trendingItem">
-                          <Form.Check
-                            type="checkbox"
-                            label="Tranding Item"
-                            value="true"
-                            onChange={handleTrendingCheckBox}
-                          />
-                        </Form.Group>
-                      </div>
-                    </Container.Column> */}
-
-                    {/* New Arrivals */}
-                    {/*  <Container.Column className="col-lg-4">
-                      <div className="input-group mb-3">
-                        <Form.Group controlId="newArrival">
-                          <Form.Check
-                            type="checkbox"
-                            label="New Arrivals"
-                            value="true"
-                            onChange={handleNewArrivalCheckBox}
-                          />
-                        </Form.Group>
-                      </div>
-                    </Container.Column> */}
-
-                    {/* Best Sale */}
-                    {/*  <Container.Column className="col-lg-4">
-                      <div className="input-group mb-3">
-                        <Form.Group controlId="bestSale">
-                          <Form.Check
-                            type="checkbox"
-                            label="Best Sale"
-                            value="true"
-                            onChange={handleBestSaleCheckBox}
-                          />
-                        </Form.Group>
-                      </div>
-                    </Container.Column> */}
-
-                    {/* Tags */}
-                    {/*  <Container.Column className="col-lg-4">
-                      <div className="form-group mb-4">
-                        {tags.error ? (
-                          <p className="text-danger">{tags.error}</p>
-                        ) : (
-                          <p>Tags</p>
-                        )}
-
-                        <CreatableSelect
-                          classNamePrefix="custom-select"
-                          isMulti
-                          styles={customStyles}
-                          placeholder={"Enter tags"}
-                          components={{
-                            DropdownIndicator: () => null,
-                            IndicatorSeparator: () => null,
-                          }}
-                          onChange={handleTags}
-                        />
-                      </div>
-                    </Container.Column> */}
-
-                    {/* SKU */}
-                    {/*  <Container.Column className="col-lg-4">
-                      <div className="form-group mb-4">
-                        {errors.sku && errors.sku.message ? (
-                          <p className="text-danger">
-                            {errors.sku && errors.sku.message}
-                          </p>
-                        ) : (
-                          <p>Product SKU</p>
-                        )}
-
-                        <input
-                          type="text"
-                          name="sku"
-                          className="form-control shadow-none"
-                          placeholder="Enter SKU"
-                          ref={register({
-                            required: "SKU is required",
-                          })}
-                        />
-                      </div>
-                    </Container.Column> */}
-
-                    {/* Stock amount */}
-                    {/*   <Container.Column className="col-lg-4">
-                      <div className="form-group mb-4">
-                        {errors.stockAmount && errors.stockAmount.message ? (
-                          <p className="text-danger">
-                            {errors.stockAmount && errors.stockAmount.message}
-                          </p>
-                        ) : (
-                          <p>Stock amount</p>
-                        )}
-
-                        <input
-                          type="number"
-                          name="stockAmount"
-                          className="form-control shadow-none"
-                          placeholder="Enter stock name"
-                          ref={register({
-                            required: "Stock amount is required",
-                            pattern: {
-                              value: /^\d+$/,
-                              message: "The amount must be in number.",
-                            },
-                          })}
-                        />
-                      </div>
-                    </Container.Column> */}
                   </Container.Row>
 
                   {/* Pricing */}
@@ -882,23 +766,6 @@ const Create = () => {
                         </div>
                       </Container.Column>
 
-                      {/* Discount type */}
-                      {/*   <Container.Column className="col-lg-4">
-                        <div className="form-group mb-4">
-                          <p>Discount Amount</p>
-
-                          <select
-                            name="discountAmount"
-                            className="form-control shadow-none"
-                            ref={register()}
-                          >
-                            <option value="">Select type</option>
-                            <option value="Flat">Flat</option>
-                            <option value="Percentage">Percentage</option>
-                          </select>
-                        </div>
-                      </Container.Column> */}
-
                       {/* Discount Amount */}
                       <Container.Column className="col-lg-4">
                         <div className="form-group mb-4">
@@ -960,7 +827,7 @@ const Create = () => {
                           type="text"
                           name="product_name"
                           className="form-control shadow-none"
-                          placeholder="product name"
+                          placeholder="product number"
                           ref={register()}
                         />
                       </div>
@@ -986,26 +853,26 @@ const Create = () => {
                     <Container.Row>
                       <Container.Column className="col-lg-4">
                         <div className="form-group mb-4">
-                          <p>Isbn</p>
+                          <p>ISBN</p>
 
                           <input
                             type="text"
                             name="isbn"
                             className="form-control shadow-none"
-                            placeholder="isbn"
+                            placeholder="ISBN"
                             ref={register()}
                           />
                         </div>
                       </Container.Column>
                       <Container.Column className="col-lg-4">
                         <div className="form-group mb-4">
-                          <p>Pon</p>
+                          <p>Nop</p>
 
                           <input
                             type="text"
-                            name="discountAmount"
+                            name="number of pages"
                             className="form-control shadow-none"
-                            placeholder="pon"
+                            placeholder="number of pages"
                             ref={register()}
                           />
                         </div>
@@ -1026,23 +893,10 @@ const Create = () => {
                     </Container.Row>
                   </Container.Fluid>
 
-                  {/* <ProductMaterialInputs data={getMaterials} /> */}
-                  {/*  <ProductAdditionalInputs data={getAdditional} /> */}
-                  {/* <ReturnPolicy
-                                        data={handleReturnReplacement}
-                                        error={returnReplace.limitError}
-                                    /> */}
-
-                  {/* <Warranty
-                                        data={handleWarranty}
-                                        error={warranty.error}
-                                    /> */}
-
-                  {/* <Emi data={handleEMI} /> */}
                   <DescriptionInput data={getDescription} />
 
                   {/* Video */}
-                  {/*   <div className="row mb-2 mb-lg-3">
+                  {/*    <div className="row mb-2 mb-lg-3">
                     <div className="col-12">
                       <div className="form-group mb-4">
                         <p>Video Link</p>
@@ -1051,7 +905,7 @@ const Create = () => {
                           type="text"
                           name="video"
                           className="form-control shadow-none"
-                          placeholder="https://www.youtube.com/embed/Fm2TH7e93ug"
+                          placeholder="enter your video link"
                           ref={register()}
                         />
                       </div>
@@ -1059,94 +913,99 @@ const Create = () => {
                   </div> */}
 
                   {/* cover image upload & preview Container */}
-                  <div className="row mb-3 mb-lg-4">
-                    <div className="col-12">
-                      <div>
-                        {thumbnail.error ? (
-                          <p className="text-danger mb-0 ml-2">
-                            {thumbnail.error}
-                          </p>
-                        ) : (
-                          <p className="mb-0 ml-2">Cover Image</p>
-                        )}
-                      </div>
+                  <Container.Row>
+                    <Container.Column class="col-lg-6">
+                      <div className="row mb-3 mb-lg-4">
+                        <div className="col-12">
+                          <div>
+                            {thumbnail.error ? (
+                              <p className="text-danger mb-0 ml-2">
+                                {thumbnail.error}
+                              </p>
+                            ) : (
+                              <p className="mb-0 ml-2">Cover Image</p>
+                            )}
+                          </div>
 
-                      <div className="d-flex">
-                        <div className="thumbnail-container">
-                          <div className="image border">
-                            <input
-                              type="file"
-                              accept=".jpg, .png, .jpeg"
-                              className="upload"
-                              onChange={thumbnailHandeller}
-                            />
-                            <div className="flex-center flex-column">
-                              <Icon icon={plus} size={22} />
+                          <div className="d-flex">
+                            <div className="thumbnail-container">
+                              <div className="image border">
+                                <input
+                                  type="file"
+                                  accept=".jpg, .png, .jpeg"
+                                  className="upload"
+                                  onChange={thumbnailHandeller}
+                                />
+                                <div className="flex-center flex-column">
+                                  <Icon icon={plus} size={22} />
+                                </div>
+                              </div>
                             </div>
+
+                            {/* image preview */}
+                            {thumbnail.preview ? (
+                              <div className="thumbnail-container text-center">
+                                <div className="image border">
+                                  <img
+                                    src={thumbnail.preview}
+                                    className="img-fluid"
+                                    alt="..."
+                                  />
+                                </div>
+                              </div>
+                            ) : null}
                           </div>
                         </div>
-
-                        {/* image preview */}
-                        {thumbnail.preview ? (
-                          <div className="thumbnail-container text-center">
-                            <div className="image border">
-                              <img
-                                src={thumbnail.preview}
-                                className="img-fluid"
-                                alt="..."
-                              />
-                            </div>
+                      </div>
+                      {/* cover image end */}
+                    </Container.Column>
+                    <Container.Column class="col-lg-6">
+                      {/* inside image upload & preview Container */}
+                      <div className="row mb-3 mb-lg-4">
+                        <div className="col-12">
+                          <div>
+                            {thumbnail.error ? (
+                              <p className="text-danger mb-0 ml-2">
+                                {thumbnail.error}
+                              </p>
+                            ) : (
+                              <p className="mb-0 ml-2">Look Inside</p>
+                            )}
                           </div>
-                        ) : null}
-                      </div>
-                    </div>
-                  </div>
-                  {/* cover image end */}
 
-                  {/* inside image upload & preview Container */}
-                  <div className="row mb-3 mb-lg-4">
-                    <div className="col-12">
-                      <div>
-                        {thumbnail.error ? (
-                          <p className="text-danger mb-0 ml-2">
-                            {thumbnail.error}
-                          </p>
-                        ) : (
-                          <p className="mb-0 ml-2">Look Inside</p>
-                        )}
-                      </div>
-
-                      <div className="d-flex">
-                        <div className="thumbnail-container">
-                          <div className="image border">
-                            <input
-                              type="file"
-                              accept=".jpg, .png, .jpeg"
-                              className="upload"
-                              onChange={thumbnailHandeller}
-                            />
-                            <div className="flex-center flex-column">
-                              <Icon icon={plus} size={22} />
+                          <div className="d-flex">
+                            <div className="thumbnail-container">
+                              <div className="image border">
+                                <input
+                                  type="file"
+                                  accept=".jpg, .png, .jpeg"
+                                  className="upload"
+                                  onChange={thumbnailHandeller}
+                                />
+                                <div className="flex-center flex-column">
+                                  <Icon icon={plus} size={22} />
+                                </div>
+                              </div>
                             </div>
+
+                            {/* image preview */}
+                            {thumbnail.preview ? (
+                              <div className="thumbnail-container text-center">
+                                <div className="image border">
+                                  <img
+                                    src={thumbnail.preview}
+                                    className="img-fluid"
+                                    alt="..."
+                                  />
+                                </div>
+                              </div>
+                            ) : null}
                           </div>
                         </div>
-
-                        {/* image preview */}
-                        {thumbnail.preview ? (
-                          <div className="thumbnail-container text-center">
-                            <div className="image border">
-                              <img
-                                src={thumbnail.preview}
-                                className="img-fluid"
-                                alt="..."
-                              />
-                            </div>
-                          </div>
-                        ) : null}
                       </div>
-                    </div>
-                  </div>
-                  {/* inside image end */}
+                      {/* inside image end */}
+                    </Container.Column>
+                  </Container.Row>
 
                   <div className="row">
                     {/* Submit button */}
