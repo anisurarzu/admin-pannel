@@ -391,7 +391,7 @@ const Create = () => {
     // }
 
     setLoading(true);
-  /*   await Requests.Product.Store(formData, header); */
+    await Requests.Product.Store(formData, header);
     setLoading(false);
 
     console.log(data,formData)

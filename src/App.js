@@ -3,7 +3,7 @@ import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { IdleTimerContainer } from "./components/idleTimer/IdleTimerContainer";
 
-// import Login from "./pages/auth/Login";
+import Login from "./pages/auth/Login";
 // import Reset from "./pages/auth/Reset";
 import Master from "./pages/master/Index";
 import FourOFour from "./pages/fourOfour/Index";
@@ -18,7 +18,7 @@ function App() {
         <Router>
           <ScrollToTop>
             <Switch>
-              {/* <Route exact path="/" component={Login} /> */}
+                <Route exact path="/login" component={Login} />
               {/* <Route exact path="/reset" component={Reset} /> */}
 
               {/* <PrivateRoute path="/dashboard" role={"Super admin" || "Content Officer"}> */}
@@ -26,7 +26,7 @@ function App() {
                 <Master />
               </Route>
 
-            {/*   <Route path="/dashboard">
+              {/*   <Route path="/dashboard">
                 <Master />
               </Route> */}
               <Route path="*" component={FourOFour} />
