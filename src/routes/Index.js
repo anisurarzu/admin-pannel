@@ -369,41 +369,7 @@ export const routes = [
             }
         ]
     }, */
-    {
-        title: "Category",
-        name: "category",
-        inDrawer: true,
-        icon: <Icon icon={layers} size={18} />,
-        child: [
-            {
-                title: "All Category",
-                name: "category index",
-                path: "/dashboard/category",
-                exact: true,
-                inDrawer: true,
-                icon: <Icon icon={list} size={18} />,
-                component: CategoryIndex
-            },
-            {
-                title: "New Category",
-                name: "category create",
-                path: "/dashboard/category/create",
-                exact: true,
-                inDrawer: true,
-                icon: <Icon icon={plus} size={18} />,
-                component: CategoryCreate
-            },
-           /*  {
-                title: "Edit Category",
-                name: "category edit",
-                path: "/dashboard/category/:type/:id/edit",
-                exact: true,
-                inDrawer: false,
-                icon: null,
-                component: CategoryEdit
-            } */
-        ]
-    },
+   
   {
     title: "Product",
     name: "product",

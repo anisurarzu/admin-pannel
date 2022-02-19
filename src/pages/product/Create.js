@@ -895,23 +895,6 @@ const Create = () => {
 
                   <DescriptionInput data={getDescription} />
 
-                  {/* Video */}
-                  {/*    <div className="row mb-2 mb-lg-3">
-                    <div className="col-12">
-                      <div className="form-group mb-4">
-                        <p>Video Link</p>
-
-                        <input
-                          type="text"
-                          name="video"
-                          className="form-control shadow-none"
-                          placeholder="enter your video link"
-                          ref={register()}
-                        />
-                      </div>
-                    </div>
-                  </div> */}
-
                   {/* cover image upload & preview Container */}
                   <div className="d-flex">
                     <div className="row mb-3 mb-lg-4">
