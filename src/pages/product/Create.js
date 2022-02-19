@@ -391,7 +391,7 @@ const Create = () => {
     // }
 
     setLoading(true);
-    await Requests.Product.Store(formData, header);
+  /*   await Requests.Product.Store(formData, header); */
     setLoading(false);
 
     console.log(data, formData);
@@ -854,7 +854,7 @@ const Create = () => {
                       <Container.Column className="col-lg-4">
                         <div className="form-group mb-4">
                           <p>ISBN</p>
-
+ 
                           <input
                             type="text"
                             name="isbn"
@@ -917,6 +917,7 @@ const Create = () => {
                                 accept=".jpg, .png, .jpeg"
                                 className="upload"
                                 onChange={thumbnailHandeller}
+                                required
                               />
                               <div className="flex-center flex-column">
                                 <Icon icon={plus} size={22} />

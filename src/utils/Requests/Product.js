@@ -16,7 +16,7 @@ const Index = async (query, header) => {
 }
 
 // Store product
-const Store = async (data, header) => {
+/* const Store = async (data, header) => {
     try {
         const response = await Axios.post(`${api}`, data, header)
         if (response.status === 201) {
@@ -26,13 +26,13 @@ const Store = async (data, header) => {
     } catch (error) {
         if (error) return errorHandeller(error);
     }
-}
+} */
 
 
 
 const Product = {
     Index,
-    Store,
+    /* Store, */
 }
 
 export default Product
